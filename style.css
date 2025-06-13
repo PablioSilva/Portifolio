@@ -12,7 +12,7 @@
 body{
     min-height: 100vh;
     background-color: #fff;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     margin: 0;
     width: 100%;
     
@@ -23,41 +23,7 @@ body{
     overflow-x: hidden;
 }
 
-.navegacao{
-    
-    width: 100%;
-    height: 50px;
-    padding: 5px;
-    margin-bottom: 10px;
-    
 
-
-}
-ul{
-    display: flex;
-    justify-content: end;
-
-}
-li{
-    margin:10px;
-    list-style: none;
-    
-
-}
-.navegacao a{
-    text-decoration: none;
-    color: #7A7A7A;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 25px;
-}
-
- .navegacao a:hover{
-    
-    
-    background-color: #A8B8A5;
-    color: #F6F2EC;
-}
 .container{
     width: 100%;
     height: 400px;
@@ -76,9 +42,6 @@ li{
     justify-content: center;
     margin-top: -10px;
    
-    
-
-
 }
 
 .button{
@@ -92,6 +55,7 @@ li{
     position: relative;
     left: 250px;
     cursor: pointer;
+    font-family: "Montserrat", sans-serif;;
     
 
 }
@@ -122,7 +86,9 @@ li{
     font-size: 20px;
 }
 .imagemperfil{
-    width: 60%;
+    width: 50%;
+    height: 80%;
+    margin-top: 80px;
 }
 
 /* inicio da section principal */
@@ -137,16 +103,22 @@ li{
 }
 .containerfilho{
     display: flex;
+    
+    
 }
 .alinhamento-hard-skill{
     display: flex;
+    
+    
 }
-.icon{
-    width: 30px;
 
-}
-.icones{
-    margin-top: 20px;
+
+.icones {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  margin-top: 20px;
     display: flex;
     justify-content: center;
     width: 70px;
@@ -154,6 +126,40 @@ li{
     border-radius: 50%;
     background-color: #F6F2EC;
     margin: 10px;
+  
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 120%; /* aparece acima do ícone */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2e2e2e;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+.icones:hover .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* seta embaixo do balão */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #2e2e2e transparent transparent transparent;
 }
 .icones-hard{
     margin-top: 20px;
@@ -164,6 +170,15 @@ li{
     border-radius: 50%;
     background-color:#A8B8A5;
     margin: 10px;}
+
+
+
+.icon{
+    width: 30px;
+
+}
+
+
 .alinhamento-icons{
     width: 50%;
     display: flex;
@@ -179,81 +194,171 @@ li{
     margin-top: 20px;
     
 }
-.titulos h1{
+
+.abaskil{
+    width: 50%;
+    text-align: center;
+}
+
+.abaskil h1{
     font-weight: 200;
     font-family:"Edu NSW ACT Hand Pre", cursive;
 }
+.abaskil2 h1{
+     font-weight: 200;
+     font-family:"Edu NSW ACT Hand Pre", cursive;
+}
 
-/*inicio aba projetos*/
+h2{
+    font-size: 40px;
+    font-weight: 200;
+    font-family: "Edu NSW ACT Hand Pre", cursive;;
+}
 
 .container3{
-    width: 80%;
+    width: 100%;
     height: auto;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #A8B8A5;
+    margin-top: 100px;
+    padding-bottom: 100px;
     
     
 }
-h2{
-    margin-top: 50px;
-    font-size: 50px;
-    font-weight: 200;
-    font-family:"Edu NSW ACT Hand Pre", cursive;
-}
-.projetos{
-    width: 83%;
+
+.alinhamento-projetos{
+    width: 90%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 30px;
     border-radius: 15px;
     margin-top: 40px;
     
     
+    
+}
+.card-wrap {
+  margin: 10px;
+  transform: perspective(800px);
+  transform-style: preserve-3d;
+  cursor: pointer;
 }
 
-.imagens-projeto{
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+.card-wrap:hover .card-info {
+  transform: translateY(0);
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
-.alinhamento-paragrafos{
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    font-size: 15px;
-    background-color: #F6F2EC;
-    border-radius: 15px;
-    
+
+.card-wrap:hover .card-info p {
+  opacity: 1;
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
-.img-projeto{
-    
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    
-    border-radius: 15px;
-    
+
+.card-wrap:hover .card-info:after {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 5s cubic-bezier(0.23, 1, 0.32, 1);
 }
-.alinhamento-paragrafos2{
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    font-size: 15px;
-    background-color: #A8B8A5;
-    border-radius: 15px;
-    
+
+.card-wrap:hover .card-bg {
+  opacity: 0.8;
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 5s cubic-bezier(0.23, 1, 0.32, 1);
 }
+
+.card-wrap:hover .card {
+  box-shadow:
+    rgba(255, 255, 255, 0.2) 0 0 40px 5px,
+    rgba(255, 255, 255, 1) 0 0 0 1px,
+    rgba(0, 0, 0, 0.66) 0 30px 60px 0,
+    inset #333 0 0 0 5px,
+    inset white 0 0 0 6px;
+  transition:
+    0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card {
+  position: relative;
+  flex: 0 0 320px;
+  width: 400px;
+  height: 250px;
+  background-color: #333;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow:
+    rgba(0, 0, 0, 0.66) 0 30px 60px 0,
+    inset #333 0 0 0 5px,
+    inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.card-bg {
+  opacity: 0.5;
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  top: -5%;
+  left: -5%;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  pointer-events: none;
+}
+
+.card-info {
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  transform: translateY(40%);
+  transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.card-info p {
+  opacity: 0;
+  text-shadow: rgba(0, 0, 0, 1) 0 2px 3px;
+  transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.card-info * {
+  position: relative;
+  z-index: 1;
+}
+
+.card-info:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+  background-blend-mode: overlay;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.card-info h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
+  margin: 0 0 10px 0;
+}
+
+
+
 
 .container4 p{
     font-size: 20px;
     width: 100%;
-    
     padding-left: 15px;
 }
 .sobremim h2{
@@ -263,14 +368,14 @@ h2{
 }
 .container4{
     width: 100%;
-    margin-top: 100px;
+    
     
     
 }
 
 .sobremim{
     background-color: #F6F2EC;
-    padding:20px 20px 50px 20px;
+    padding:70px 20px 50px 20px;
     width: 100%;
     
 
@@ -376,4 +481,364 @@ h2{
     font-weight: 200;
     font-family:"Edu NSW ACT Hand Pre", cursive;
 
+}
+
+
+@media  (max-width: 600px){
+ .alinhamento-projetos{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+    gap: 30px;
+    border-radius: 15px;
+    align-items: center;
+}
+.container2{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    
+    
+    
+}
+
+.container{
+    width: 100%;
+    height: 200px;
+    background-image: url(img/fundo.png);
+    background-size: cover;      /* ou contain */
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    
+}
+    .containerfilho{
+        flex-direction: column;
+        width: 100%;
+        
+    }
+    .abaskil{
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.imagemperfil{
+    width: 80%;
+    height: 70%;
+    margin-top: 60px;
+    
+}
+.button{
+    left: 30px;
+    font-size: 10px;
+    width: 80px;
+    margin-top: 20px;
+}
+.paragrafo h1{
+    font-weight: 500;
+    font-size: 20px;
+    
+}
+.nome{
+    font-size: 15px;
+}
+
+.frase{
+    font-size: 10px;
+}
+
+.icones {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #F6F2EC;
+    margin: 10px;
+    
+  
+}
+.icones-hard{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color:#A8B8A5;
+    margin: 10px;}
+.icon{
+    width: 20px;
+
+}
+
+.card {
+  position: relative;
+  flex: 0 0 320px;
+  width: 300px;
+  height: 150px;
+  background-color: #333;
+  left: -50px;
+  
+}
+.card-info h1{
+  
+  font-size: 20px;
+  
+}
+.container4 p{
+    font-size: 15px;
+    width: 100%;
+    padding-left: 15px;
+}
+}
+
+
+@media (min-width: 600px) and (max-width: 1000px) {
+    
+    .alinhamento-projetos{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+    gap: 30px;
+    border-radius: 15px;
+    align-items: center;
+}
+    .containerfilho{
+        flex-direction: column;
+    }
+    .abaskil{
+    width: 100%;
+    text-align: center;
+    margin: 30px;
+}
+
+.imagemperfil{
+    width: 80%;
+    
+}
+.button{
+    left: 100px;
+}
+.paragrafo h1{
+    font-weight: 500;
+    font-size: 30px;
+    
+}
+.nome{
+    font-size: 20px;
+}
+
+.frase{
+    font-size: 15px;
+}
+}
+@media (min-width: 1000px) and (max-width: 1400px) {
+    
+    .alinhamento-projetos{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 30px;
+    border-radius: 15px;
+    align-items: center;
+}
+
+
+
+.container2{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    
+    
+    
+    
+    
+}
+
+.container{
+    width: 100%;
+    height: 400px;
+    background-image: url(img/fundo.png);
+    background-size: cover;      /* ou contain */
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    
+}
+    .containerfilho{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        
+    }
+
+.imagemperfil{
+    width: 80%;
+    
+}
+.button{
+    left: 100px;
+}
+.paragrafo h1{
+    font-weight: 500;
+    font-size: 30px;
+    
+}
+.nome{
+    font-size: 20px;
+}
+
+.frase{
+    font-size: 15px;
+}
+
+.container3{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #A8B8A5;
+    margin-top: 0px;
+    padding-bottom: 100px;
+    
+    
+}
+}
+
+@media (min-width: 1600px){
+
+    .alinhamento-projetos{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 30px;
+    border-radius: 15px;
+    align-items: center;
+}
+.container2{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    
+    
+    
+}
+
+.container{
+    width: 100%;
+    height: 600px;
+    background-image: url(img/fundo.png);
+    background-size: cover;      /* ou contain */
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    
+}
+    
+    .abaskil{
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    
+}
+.abaskil h1{ font-size: 45px;
+
+}
+
+.imagemperfil{
+    width: 60%;
+    height: 70%;
+    margin-top: 180px; 
+    
+}
+.button{
+    left: 30px;
+    font-size: 30px;
+    width: 150px;
+    height: 45px;
+    margin-top: 20px; 
+}
+.paragrafo h1{
+    font-weight: 500;
+    font-size: 60px;
+    
+}
+.nome{
+    font-size: 50px;
+}
+
+.frase{
+    font-size: 40px;
+}
+
+.icones {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #F6F2EC;
+    margin: 10px;
+    left: -100px;
+    
+  
+}
+.icones-hard{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color:#A8B8A5;
+    margin: 10px;}
+.icon{
+    width: 50px;
+
+}
+
+.card {
+  position: relative;
+  flex: 0 0 320px;
+  width: 600px;
+  height: 400px;
+  background-color: #333;
+  left: -50px;
+  
+}
+.card-info h1{
+  
+  font-size: 50px;
+  
+}
+.container4 p{
+    font-size: 35px;
+    width: 100%;
+    padding-left: 15px;
+}
+
+.container4 h2{
+    font-size: 45px;
+}
 }
