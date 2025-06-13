@@ -1,0 +1,379 @@
+ 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&display=swap');
+
+*{padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #fff;
+    padding-bottom: 50px;
+    margin: 0;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+.navegacao{
+    
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    margin-bottom: 10px;
+    
+
+
+}
+ul{
+    display: flex;
+    justify-content: end;
+
+}
+li{
+    margin:10px;
+    list-style: none;
+    
+
+}
+.navegacao a{
+    text-decoration: none;
+    color: #7A7A7A;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+ .navegacao a:hover{
+    
+    
+    background-color: #A8B8A5;
+    color: #F6F2EC;
+}
+.container{
+    width: 100%;
+    height: 400px;
+    background-image: url(img/fundo.png);
+    background-size: cover;      /* ou contain */
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.paragrafo{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -10px;
+   
+    
+
+
+}
+
+.button{
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.437);
+    background-color: #ffffffa7;
+    margin-top: 60px;
+    position: relative;
+    left: 250px;
+    cursor: pointer;
+    
+
+}
+.paragrafo h1{
+    font-weight: 500;
+    font-size: 40px;
+    
+}
+
+.paragrafo p{
+    font-weight: 200;
+    margin: 20px  5px 10px;
+    
+    
+}
+.nome{
+    font-size: 30px;
+}
+.imagem {
+    
+    width: 50%;
+    height: auto;
+    
+    display: flex;
+    justify-content: center;
+}
+.frase{
+    font-size: 20px;
+}
+.imagemperfil{
+    width: 60%;
+}
+
+/* inicio da section principal */
+
+.container2{
+    width: 80%;
+    height: auto;
+    padding: 20px;
+    
+    
+    
+}
+.containerfilho{
+    display: flex;
+}
+.alinhamento-hard-skill{
+    display: flex;
+}
+.icon{
+    width: 30px;
+
+}
+.icones{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #F6F2EC;
+    margin: 10px;
+}
+.icones-hard{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color:#A8B8A5;
+    margin: 10px;}
+.alinhamento-icons{
+    width: 50%;
+    display: flex;
+}
+.icons{
+    display: flex;
+}
+
+.titulos{
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    margin-top: 20px;
+    
+}
+.titulos h1{
+    font-weight: 200;
+    font-family:"Edu NSW ACT Hand Pre", cursive;
+}
+
+/*inicio aba projetos*/
+
+.container3{
+    width: 80%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+h2{
+    margin-top: 50px;
+    font-size: 50px;
+    font-weight: 200;
+    font-family:"Edu NSW ACT Hand Pre", cursive;
+}
+.projetos{
+    width: 83%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    border-radius: 15px;
+    margin-top: 40px;
+    
+    
+}
+
+.imagens-projeto{
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.alinhamento-paragrafos{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    font-size: 15px;
+    background-color: #F6F2EC;
+    border-radius: 15px;
+    
+}
+.img-projeto{
+    
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+    border-radius: 15px;
+    
+}
+.alinhamento-paragrafos2{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    font-size: 15px;
+    background-color: #A8B8A5;
+    border-radius: 15px;
+    
+}
+
+.container4 p{
+    font-size: 20px;
+    width: 100%;
+    
+    padding-left: 15px;
+}
+.sobremim h2{
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+.container4{
+    width: 100%;
+    margin-top: 100px;
+    
+    
+}
+
+.sobremim{
+    background-color: #F6F2EC;
+    padding:20px 20px 50px 20px;
+    width: 100%;
+    
+
+}
+
+.btn-contatos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 20px;
+    
+ }
+
+ .link{
+    width: 80px;
+    height: 80px;
+    box-shadow: 15px 0 8px rgba(0, 0, 0, 0.405);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    
+    
+ }
+ 
+ .link:hover i{
+    color: #fff;
+    transform: scale(1.2);
+    
+ }
+ .link i{
+    transition: .2s;
+ }
+
+ .link-1::before{
+    background-color: #25D366;
+ }
+ .link-2::before{
+    background-color: #171515;
+ }
+ .link-3::before{
+    background-color: #0077B5;
+    
+ }
+
+    .link-1{
+        color: #25D366;
+    }
+    .link-2{
+        color: #171515;
+    }
+    .link-3{
+        color: #0077B5
+        
+    }
+
+    .link::before{
+        content: "";
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        position: absolute;
+        left: -100px;
+        top: 100%;
+       
+        
+    }
+    .link:hover::before{
+        animation: desloca .5s;
+        left: 0px;
+            top: 0px;
+
+    }
+   
+
+    @keyframes desloca {
+        0%{
+            left: -100px;
+             top: 100%;
+        }
+        50%{
+            left: 15%;
+            top: -35%;
+        }
+        100% {
+            left: -2px;
+            top: 0 -2px;
+        }
+        
+    }
+.titulo{
+    
+    text-align: center;
+    font-size: 50px;
+    margin-top: 100px;
+    font-weight: 200;
+    font-family:"Edu NSW ACT Hand Pre", cursive;
+
+}
